@@ -1,0 +1,1187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    background-color:white;
+    width: 100%;
+}
+.prenav{
+    top: 0;
+color: white;
+background-color: black;
+text-align: center;
+ width: 100%;
+ max-height: 40px;
+ overflow: hidden;
+}
+.h3nav{
+    letter-spacing:8px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+ 
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction:row;
+    padding:22px 0;
+    position: sticky;
+    top:0px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color:rgba(0,0,0,1);
+    position: relative;
+    
+}
+.lgout{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.catFilters {
+  width: 260px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 14px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+#catToggle {
+  width:200px;
+  padding: 14px;
+  background-color: #111;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: em;
+
+  outline: none;
+  appearance: none;
+}
+
+#catToggle:hover {
+  background-color: #000;
+}
+
+#catToggle:active {
+  background-color: #000;
+}
+#catToggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+}
+
+#categoryList.active {
+  display: block;
+}
+#categoryFilters {
+  display: none; /* skriveno po defaultu */
+}
+
+#categoryFilters.active {
+  display: block; /* vidi se kad dugme klikne */
+}
+
+#categoryList {
+  display: none;
+  margin-top: 14px;
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+
+#categoryList div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 6px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+
+#categoryList div:hover {
+  background: #f2f2f2;
+}
+
+
+#categoryList input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  font-weight: bolder;
+  color: black;
+}
+
+
+.category-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  .catFilters {
+    width: 100%;
+  }
+}
+
+#menu {
+  display:none;
+}
+
+#menu.active {
+  display: flex;
+}
+ 
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 5%;
+  font-weight:bold;
+  position: sticky;
+}
+
+.burger span {
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+.sort{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0 3rem;
+}
+ 
+option{
+    border-radius:5px;
+}
+#sortSelect{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #f1f1f1;
+    border-radius: 10px;
+    transition: 1s;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);;
+}
+#sortSelect:hover{
+    background-color:#f7f7f7;
+    color: black;
+}
+ .slike{
+    display: flex;
+    gap: 0.5rem;
+ }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5rem;        
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+}
+ nav ul li a {
+  color:white;           
+  text-decoration: none;  
+  font-weight: lighter;
+  transition: 0.3s;
+  letter-spacing: 5px;
+}
+nav ul li a:hover{
+    color: grey;
+
+}
+.cart-link{
+    
+}
+
+
+ .ticker {
+  width: 100%;
+  overflow: hidden;
+  background: #d3d3d3;
+  color: black;
+}
+
+.ticker-track {
+  display: flex;  
+  flex-wrap: nowrap;
+  animation: scroll 15s linear infinite;  
+  padding: 0.5rem 0;
+}
+
+.ticker-track span {
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-right: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  margin-right: 0;
+}
+.spandrugi{
+    color: white;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+/* Hover pauza */
+.ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+ 
+a{
+    text-decoration: none;
+    color: black;
+}
+ 
+.h{
+    right: 0;
+    font-size: 1.2rem;
+    padding: 0 0.4rem;
+   
+    
+}  
+ .heder {
+  width: 100%;
+  height: 60vh;  
+  background-image: url('photo-1487014679447-9f8336841d58.avif');
+  background-size: cover;      
+  background-position: center;  
+  background-repeat: no-repeat; 
+  
+  display: flex;
+  justify-content: center;   
+  align-items: center;        
+  position: relative;
+}
+
+.slikaheder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  display: block;
+}
+
+.tekst {
+ text-align: center;
+ color: white;
+ display: flex;
+ flex-direction: column;
+ gap: 0.5rem;
+}
+
+.parafheder {
+  margin: 0;
+  font-weight: lighter;
+  font-size: 2rem;
+  letter-spacing: 0.7rem;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+}
+
+.parafspan {
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: 1.5rem;
+}
+
+.parafspan2 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  padding-bottom: 1rem;
+}
+
+.shopnow {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.9);
+  border: none;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.shopnow:hover {
+  color: black;
+  background-color: white;
+}
+
+ #page-info{
+    display: inline-flex;
+    gap: 6px;
+    margin: 0 10px;
+ }
+ .page-btn{
+    padding: 6px 10px;
+    border: 1px solid red;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 4px;
+
+ }
+ .page-btn.active{
+    background-color: white;
+    color: blue;
+    font-weight: bold;
+ }
+ 
+.pretraga{
+font-size: 1.2rem;
+padding: 1rem;
+width: 40%;
+border-radius: 12px;
+border:2px solid #f1f1f1;
+transition: 1s;
+box-shadow: 0 4px 10px rgba(0,0,0,0.5);;
+}
+.pretraga:hover{
+    background-color: #f7f7f7;
+}
+.pretraga:hover::placeholder{
+    color: black;
+    transition: 1s;
+
+}
+.about{
+    height: auto;
+    width: 100%;
+    background-color:white;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+
+}
+.dugmeabout{
+    display: flex;
+    justify-content: center;
+
+
+}
+.contactUS{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+     box-shadow: 0 2px 8px rgba(0,0,0,0.9);
+     border: 1px solid grey;
+     transition: 0.7s;
+
+}
+.contactUS:hover{
+    background-color: white;
+    color: black;
+
+}
+.aboutnaslov{
+    color:black;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    padding-top: 2rem ;
+
+}
+.aboutparaf,.aboutparaf2{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0rem 3rem;
+}
+.aboutparaf{
+    padding-top: 1rem;
+}
+.slikaabout{
+    max-width:40vw;
+    max-height: 60vh;
+    padding: 1rem 3rem;
+}
+.product-list {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap:1.5rem 1rem;
+    padding:1rem;
+    background-color: #ffffff;
+} 
+
+/* PRODUCT CARD */
+.product {
+    position: relative;
+    border-radius: 18px;
+    padding: 1.6rem;
+    text-align: center;
+    border: 1px solid #e6e8ec;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04),
+                0 12px 28px rgba(0,0,0,0.06);
+    cursor: pointer;
+}
+
+ 
+.product img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 1.2rem;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 16px;
+}
+ 
+.naslov {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 0.4rem;
+}
+
+.ceneWrap {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin: 0.6rem 0 1rem;
+}
+
+.cena {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #f97316;
+}
+
+.oldCena {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+
+ 
+.dostava {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 1.2rem;
+}
+ 
+.btnDodaj {
+    width: 100%;
+    padding: 0.8rem 0;
+    background: #0f172a;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.35px;
+    cursor: pointer;
+}
+
+ 
+.popust {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: #ef4444;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 999px;
+}
+
+ 
+.ocena {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(15, 23, 42, 0.95);
+    color: #facc15;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 6px 8px;
+    border-radius: 999px;
+}
+main {
+    padding: 5% 5%;
+
+}
+ 
+.dugmici{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.6rem;
+}
+.prethodna,.sledeca{
+    padding: 0.6rem;
+    width: 100px;
+    border-radius:5px;
+    background-color:black;
+    color: white;
+    border:1px solid black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: 1s;
+
+}
+
+ #page-info{
+    display: inline-flex;
+    gap: 6px;
+    margin: 0 10px;
+ }
+ .page-btn{
+    padding: 5px 20px;
+    border: 2px solid grey;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1rem;
+
+ }
+ .page-btn.active{
+    background-color: black;
+    color:white;
+    font-weight: bold;
+ }
+.searchdiv{
+    padding:0.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    background-color: white;
+}
+.k:hover{
+    transform: scale(1.1);
+}
+.spinner{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 6px solid black;
+    border-top: 5px solid black;
+    margin: 40% auto;
+    animation: sp
+    }
+    .hidden{
+        display: none;
+    }
+    @keyframes spin {
+        to{
+            transform: rotate(360deg);
+        }
+        
+    }  
+footer {
+    background: #f9fafb;  
+    color: #111827;  
+    padding: 3rem 1.5rem;
+    font-family: "Inter", sans-serif;
+}
+
+ 
+footer a {
+    color: #111827;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #f97316;  
+}
+
+ 
+footer .glavni {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+ 
+footer .prvi {
+    flex: 1 1 350px;
+}
+
+.naslovforma {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.parafforma {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.parafforma .brojt {
+    color: #f97316;
+    font-weight: 600;
+}
+ 
+footer .prvi p i.j {
+    margin-right: 1rem;
+    font-size: 2rem;  
+    transition: color 0.3s, transform 0.3s;
+    color: #111827;
+}
+
+footer .prvi p i.j:hover {
+    color: #f97316;
+    transform: scale(1.2);
+}
+ 
+footer .prvi iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 12px;
+}
+ 
+footer .drugi {
+    flex: 1 1 350px;
+}
+
+footer .drugi .parafforma {
+    margin-bottom: 1rem;
+}
+
+footer .f {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+footer .label {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+footer .input, 
+footer .inputmessage {
+    padding: 0.65rem 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    background: #ffffff;
+    color: #111827;
+}
+
+footer .input:focus,
+footer .inputmessage:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 6px rgba(249, 115, 22, 0.3);
+}
+
+.dugmesubmit {
+    text-align: right;
+}
+
+.btnForm {
+    padding: 0.8rem 2rem;
+    background: #f97316;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnForm:hover {
+    background: #ea580c;
+}
+ 
+footer .payandallright {
+    border-top: 1px solid #d1d5db;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .payments i {
+    margin-right: 1rem;
+    font-size: 2rem; 
+    color: #111827;
+}
+
+footer .payments i:hover {
+    color: #f97316;
+}
+
+footer .zadnji {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+ 
+@media screen and (max-width: 900px) {
+    footer .glavni {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    footer .drugi {
+        margin-top: 2rem;
+    }
+
+    footer .payandallright {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 468px) {
+ nav{
+    display: flex;
+    justify-content: space-around;}
+    .h3nav{
+        font-size: 1.3rem;
+        letter-spacing: 3px;
+    }
+
+  .burger {
+    display: flex;
+  }
+  
+
+  #menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    display: none;
+    z-index: 999;
+  }
+  #menu.active {
+    display: flex;
+  }
+  
+
+    nav ul li{
+        font-size: 0.88rem;
+    }
+    .ticker-track span{
+        font-size: 0.7rem;
+    }
+    .heder{
+        width: 1005;
+        height: 90vh;
+    }
+   .parafheder { font-size: 1rem; letter-spacing: 0.2rem;  }
+  .parafspan { font-size: 4rem; letter-spacing: 0.3rem; }
+  .parafspan2 { font-size: 0.8rem; letter-spacing: 0.1rem; }
+  .shopnow { padding: 0.5rem 1rem; font-size: 0.6rem; font-weight: bold;;}
+.aboutnaslov{
+    font-size: 1.5rem;
+}
+.aboutparaf{
+    font-size: 0.8rem;
+}
+.aboutparaf2{
+    font-size: 0.8rem;
+}
+ 
+.contactUS{
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+.glavni{
+    display: flex;
+    flex-direction: column;
+    padding:0% 0%;
+}
+#page-info{
+    display:none;
+}
+.searchdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.pretraga{
+    width: 270px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+ 
+ 
+.naslovforma{
+    font-size: 1.2rem;
+}
+.parafforma{
+    font-size: 0.8rem;
+}
+.j{
+    font-size: 1.3rem;
+}
+iframe{
+    width: 70vw;
+    height:20vh;
+}
+.naslovforma{
+    font-size: 1.2rem;
+}
+.input{
+    height:30px;
+    width: auto;
+    font-size: 0.8rem;
+}
+.label{
+    font-size: 1rem;
+}
+.inputmessage{
+    height: 80px;
+    font-size: 0.8rem;
+    width: auto;
+    color:black;
+
+}
+.btnForm{
+    padding: 0.3rem 1rem;
+    font-size: 0.6rem;
+    text-align: center;
+    margin: 0;
+    margin-left:35%;
+    font-weight: bold;
+}
+.fa-cc-discover{
+    padding: 0 1rem;
+    font-size: 1px;
+
+}
+.zadnji{
+    font-size: 0.7rem;
+}
+.drugi{
+    padding: 0 3rem;
+}
+}
+
+
+@media (min-width: 768px) {
+.h3nav{
+        font-size: 1.3rem;
+        letter-spacing: 5px;
+    }
+    
+ 
+  .burger {
+    display: flex;
+  }
+
+  #menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    display: none;
+    z-index: 999;
+  }
+  .heder{
+    height: 100vh;
+  }
+
+  #menu.active {
+    display: flex;
+  }
+    nav ul li{
+        font-size: 1rem;
+    }
+    .ticker-track span{
+        font-size: 1rem;
+    }
+.parafheder{
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+}
+.parafspan{
+    font-size: 5rem;
+    letter-spacing: 12px;
+}
+.parafspan2{
+    font-size: 1rem;
+    letter-spacing: 5px;
+}
+.shopnow{
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+}
+.aboutnaslov{
+    font-size: 2rem;
+}
+.aboutparaf{
+    font-size: 1.2rem;
+}
+.aboutparaf2{
+    font-size: 1rem;
+}
+.contactUS{
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 1rem;
+}
+ 
+#page-info{
+    display: none;
+}
+.page-btn{
+    padding: 5px 12px;
+}
+footer{
+    height: 110vh;
+    width: 100%;
+}
+.glavni{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+.drugi{
+    padding: 0 3rem;
+}
+#page-info{
+    display: flex;
+}
+footer{
+    height: auto;
+} 
+.naslovforma{
+    font-size: 1.5rem;
+}
+.parafforma{
+    font-size: 1rem;
+}
+.j{
+    font-size: 1.7rem;
+}
+iframe{
+    width: 75vw;
+    height:30vh;
+}
+.naslovforma{
+    font-size: 1.2rem;
+}
+.input{
+    height:25px;
+    width: 350px;
+    font-size: 1rem;
+}
+.label{
+    font-size: 1rem;
+}
+.inputmessage{
+    height: 80px;
+    font-size: 1rem;
+    width: 350px;
+}
+
+.btnForm{
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0;
+    margin-left: 9rem;
+}
+.fa-cc-discover{
+    padding: 0 1rem;
+    font-size:1;
+
+}
+.zadnji{
+    font-size: 1rem;
+}
+
+ }
+
+ @media (min-width: 1024px) {
+.burger{display: none;}
+   #menu {
+    display: flex !important;
+    position: static;          /* više nije absolute */
+    flex-direction: row;       /* horizontalno */
+    gap: 3rem;                 /* razmak između stavki */
+    width: auto;
+    background: none;          /* ukloni pozadinu */
+    padding: 0;
+  }
+
+  nav {
+    justify-content: center; /* logo i menu u liniji */
+    position: sticky;
+  }
+  .heder{
+    height: 100vh;
+  }
+    .h3nav{
+        font-size:1rem;
+        letter-spacing: 7px;
+    }
+    nav ul li{
+        font-size: 1.2rem;
+    }
+    .ticker-track span{
+        font-size: 1.1rem;
+    }
+.parafheder{
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+.parafspan{
+    font-size: 7rem;
+    letter-spacing: 15px;
+}
+.parafspan2{
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+}
+.shopnow{
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+}
+.aboutnaslov{
+    font-size: 2.5rem;
+}
+.aboutparaf{
+    font-size: 1.3rem;
+}
+.aboutparaf2{
+    font-size: 1.2rem;
+}
+.contactUS{
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 1rem;
+}
+#page-info{
+    display: flex;
+}
+footer{
+    height: auto;
+    width: 100%;
+}
+.glavni{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+}
+.drugi{
+    padding: 0 0rem;
+}
+ 
+.prvi h2{
+    font-size: 2.2rem;
+}
+.parafforma{
+    font-size: 1.3rem;
+}
+.j{
+    font-size: 2.5rem;
+}
+iframe{
+    width:45vw;
+    height:40vh;
+}
+.naslovforma{
+    font-size: 2.2rem;
+}
+.input{
+    height:35px;
+    width: 370px;
+    font-size: 1.1rem;
+}
+.label{
+    font-size: 1.2rem;
+}
+.inputmessage{
+    height: 120px;
+    font-size: 1.1rem;
+    width: 370px;
+}
+.btnForm{
+    padding: 0.8rem 3rem;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0;
+    margin-left: 7.2rem;
+}
+.fa-cc-discover{
+    padding: 0 1rem;
+    font-size:1;
+
+}
+.zadnji{
+    font-size: 1.5rem;
+}
+  }
